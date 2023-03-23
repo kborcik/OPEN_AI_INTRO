@@ -1,0 +1,57 @@
+// below is a basic formatted chat gpt message.  This is how we interact with the ai. Using Role. and comment.
+//   model="gpt-3.5-turbo",
+//   messages=[
+//         {"role": "system", "content": "You are an aloof video game.you are asking if you he would like to help you out with a quest!"},
+       
+
+//         {"role": "user", "content": "Hello, sir!"},
+
+
+//         {"role": "assistant", "content": "Would you like to accompany me on a quest? For gold? I can reward you handsomly."},
+
+
+//         {"role": "user", "content": "Huzzah! Is there anything better than money?? What do you need me to do?"}
+
+    
+//         {"role": "assistant", "content": "My niece has been kidnapped by donkey, shrek and the dragon. I need you to spit in their eye and call them a dingus, and bring her home safe!"},
+        
+//         {"role": "user", "content": "Ahhh. I see that would require a HIGH price indeed."}
+//   ])
+
+
+//   ])
+
+//step 1: in a the root folder of your project run npm i open ai.
+
+
+//step 2: You now need an authentication key. this is a secret. Eventually save this in a .env file that is not client facing. 
+// with your key someone could run the possibility of an expensive tab. Navigate to to this link https://platform.openai.com/account/api-keys
+// make an account with open ai if you don't have one already. make a new key.
+
+
+//step 3: create a .env file in your root directory. Start by running npm i dotenv on your root directory. then create a .env file.
+// open that file and include this code. "SERVER_PORT=4000" and set this code equal to your new api key "OPENAI_API_KEY"
+//it should look like this:
+// 
+// SERVER_PORT=4000
+
+//OPENAI_API_KEY=thisisyourecretopenaikeypastedhere
+
+
+
+//step4: Lets run a test. Copy the following code into your terminal.
+//  curl https://api.openai.com/v1/chat/completions \
+//   -H "Content-Type: application/json" \
+//   -H "Authorization: Bearer $OPENAI_API_KEY" \
+//   -d '{
+//      "model": "gpt-3.5-turbo",
+//      "messages": [{"role": "user", "content": "Say this is a test!"}],
+//      "temperature": 0.7
+//    }'
+//
+// Before running that code replace $OPENAI_API_KEY with your own personal key. and run the command.
+// you should get a message back where the begining looks very similar. however inside the 'choices' object portion under 
+// the 'content' key you should see the value to be a string answering your question/ request!!!
+
+// Congratulations you made your first request to the AI!!!!
+
