@@ -55,3 +55,9 @@
 
 // Congratulations you made your first request to the AI!!!!
 
+// challenge yourself to see what code you would need to change in order to get a different response from the api.
+
+
+
+// Hint:   experiment /read the documentation and notice what you see about the "messages" array  and the "content" key.
+
